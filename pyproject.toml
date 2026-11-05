@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deptho-mcp"
+version = "0.1.0"
+description = "MCP server for Deptho: replay a crypto backtest's orders against trades and write tearsheets, locally."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = ["deptho>=0.1.1", "mcp>=2.3,<3"]
+keywords = ["mcp", "model context protocol", "backtesting", "crypto", "perpetuals", "tick data", "slippage"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://deptho.io/go/mcp"
+Source = "https://github.com/jjinaustin/deptho-mcp"
+
+[project.scripts]
+deptho-mcp = "deptho_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/deptho_mcp"]
