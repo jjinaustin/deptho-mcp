@@ -9,7 +9,7 @@ description = "MCP server for Deptho: replay a crypto backtest's orders against 
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.10"
-dependencies = ["deptho>=0.1.1", "mcp>=2.3,<3"]
+dependencies = ["deptho>=0.1.2", "mcp>=2.3,<3"]
 keywords = ["mcp", "model context protocol", "backtesting", "crypto", "perpetuals", "tick data", "slippage"]
 classifiers = [
     "Development Status :: 4 - Beta",
